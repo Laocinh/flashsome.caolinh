@@ -90,6 +90,7 @@ a{
 }
 /*nav cuộn*/
 .navigation{
+    opacity: 0;
     background-color: #fff;
     border-bottom: .05px solid rgba(152, 151, 151, 0.2);
     height: 65px;
@@ -101,9 +102,9 @@ a{
     right: 0;
     left: 0;
       position: fixed;
-      opacity: 0.9;
+      
        z-index: 5;
-       animation: navFadeIn ease 0.3s;
+       /* animation: navFadeIn ease 0.3s; */
 }
 
 
@@ -111,11 +112,18 @@ a{
 @keyframes navFadeIn{
     from{
         opacity: 0;
-        transform: translateY(-50px);
+        transform: translateY(-100px);
     }
     to{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes navFadeOut{
+    to{
+        opacity: 0;
+        transform: translateY(-100px);
     }
 }
 .navigation li a{
@@ -775,14 +783,6 @@ margin: 0 7px;
     .payment-icons{
         justify-content: center;
     }
-    
-    
-}
-
-/*Mobile responsive*/
-
-@media (max-width: 46.1875em ) {
-    
     .large-4,
     .col-foot-4{
         max-width: 95%;
@@ -790,4 +790,12 @@ margin: 0 7px;
     .product-item{
         max-width: 44%;
     }
+    
+}
+
+/*Mobile responsive*/
+
+@media (max-width: 46.1875em ) {
+    
+    
 }

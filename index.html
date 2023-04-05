@@ -9,18 +9,7 @@
     <link rel="stylesheet" href="./css/assets/themify-icons/themify-icons.css">
     <script src="./js/jquery.min.js"></script>
 
-    <script >
-        $(window).bind('scroll',function () {
-            var pos = window.scrollY;
-            if (pos >250) {
-                $('.navigation').show();
     
-            }
-            else{
-                 $('.navigation').hide();
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -49,7 +38,7 @@
                 </div>
             </div>
             <!--Nav cuộn-->
-            <div class="navigation">
+            <div id="nav" class="navigation">
                 <!--mobile-nav-->
                 <div class="mobile-nav">
                     <ul class="nav-left">
@@ -654,4 +643,21 @@
         </div>
     </div>
 </body>
+<script >
+    const navi = document.querySelector(".navigation");
+    $(window).bind('scroll',function () {
+        var pos = window.scrollY;
+        $('.navigation').hide();
+        if (pos >180) {
+            navi.style.opacity = 0.9;
+            navi.style.animation = "navFadeIn ease 0.3s";
+            $('.navigation').show();
+        }
+        else{
+            navi.style.opacity = 0;
+             $('.navigation').hide();
+            navi.style.animation = "navFadeOut ease 0.3s";
+            }
+    });
+</script>
 </html>

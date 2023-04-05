@@ -910,13 +910,6 @@ margin: 0 7px;
     .payment-icons{
         justify-content: center;
     }
-    
-    
-}
-
-/*Mobile responsive*/
-
-@media (max-width: 46.1875em ) {
     .image-fade{
         max-width: 44%;
     }
@@ -924,6 +917,13 @@ margin: 0 7px;
     .col-foot-4{
         max-width: 95%;
     }
+    
+}
+
+/*Mobile responsive*/
+
+@media (max-width: 46.1875em ) {
+    
    
 
 }
